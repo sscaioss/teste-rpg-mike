@@ -257,3 +257,105 @@ body {
 .tag-classe:hover .tooltip-classe {
     display: block;
 }
+
+
+.fundo-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 40px;
+    border-radius: 12px;
+    border: 3px solid #332940;
+    box-shadow: - 15px 40px rgba(0, 0, 0, 0.9)
+}
+
+/* =========================================
+   TELAS DE LOGIN E CADASTRO
+========================================= */
+
+/* Fundo exclusivo da tela de login */
+.fundo-login {
+    /* Troque 'background-rpg.jpg' pelo nome do arquivo da imagem que você salvou */
+    background-image: url('imagens/background_login2.jfif'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Centraliza a caixa na tela */
+.container-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 70px); /* Desconta a altura do cabeçalho */
+    padding: 20px;
+}
+
+/* A Caixa de Login sobre o fundo */
+.caixa-login {
+    /* Cor de fundo com transparência (0.85 = 85% visível, 15% transparente) */
+    background-color: rgba(26, 26, 51, 0.85); 
+    /* Efeito moderno que desfoca levemente a imagem de fundo atrás da caixa */
+    backdrop-filter: blur(6px); 
+    border: 2px solid #ffb454; /* Borda destacada */
+    border-radius: 12px;
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.9); /* Sombra escura ao redor da caixa */
+    text-align: center;
+    z-index: 10; /* Garante que fique por cima de tudo */
+}
+
+.caixa-login h2 {
+    color: #ffb454;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.caixa-login form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 15px;
+}
+
+.caixa-login label {
+    color: #dcd6e4;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.caixa-login input {
+    background-color: rgba(18, 18, 32, 0.9); /* Input levemente transparente */
+    border: 1px solid #4a2b74;
+    color: #ffffff;
+    padding: 12px;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.caixa-login input:focus {
+    border-color: #ffb454;
+}
+
+.btn-entrar {
+    background-color: #4a2b74;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-entrar:hover {
+    background-color: #6b3fa0;
+    transform: scale(1.02); /* Leve efeito de aumento ao passar o mouse */
+}
