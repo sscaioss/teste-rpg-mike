@@ -209,3 +209,51 @@ body {
     margin-bottom: 12px;
     padding: 5px;           /* Espaçamento interno suave */
 }
+
+
+
+/* Torna a tag-classe a referência de posição para a janela */
+.tag-classe {
+    position: relative;
+    cursor: pointer;
+}
+
+
+/* Estilização da Janela Flutuante (Tooltip) - Inicialmente Escondida */
+.tooltip-classe {
+    display: none; /* Escondida por padrão */
+    position: absolute;
+    bottom: 125%; /* Posiciona a janela acima do span*/
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza horizontalmente (em relação ao span) */
+
+    width: 190px;
+    background-color: #1a1a2e;
+    border: 2px solid #ffb454;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.9);
+    z-index: 100;               /* Garante que fique por cima de tudo */
+    text-align: center;
+}
+
+/* Imagem dentro da janela flutuante */
+.tooltip-classe img {
+    width: 100%;
+    height:200px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 6px;
+}
+
+/* Texto dentro da janela flutuante */
+.tooltip-classe p {
+    font-size: 0.75rem;
+    color: #e0e0e0;
+    line-height: 1.2;
+}
+
+/* A MÁGICA: Quando passa o mouse no span, MOSTRA a janela flutuante! */
+.tag-classe:hover .tooltip-classe {
+    display: block;
+}
